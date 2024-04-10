@@ -18,6 +18,7 @@ npm run build
 ### To format code 
 `
 npm run format 
+`
 
 ### To run linter
 `
