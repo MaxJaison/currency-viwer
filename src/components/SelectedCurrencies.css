@@ -1,0 +1,90 @@
+.selected-currency-container {
+    margin-bottom: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5%;
+}
+
+.selected-currency {
+    background-color: rgb(172, 177, 182);
+    padding: 5px 0;
+    width: 90px;
+    text-transform: lowercase;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.checkbox {
+    display: none;
+}
+
+.label {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 80px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid darkgrey;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkbox:checked + .label::after {
+    content: 'X';
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.delete-icon {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(50% + 15px));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-icon:hover {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.delete-icon::before,
+.delete-icon::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 13px;
+    background-color: white;
+}
+
+.delete-icon:hover::before,
+.delete-icon:hover::after {
+    background-color: black;
+    border: 1px solid black;
+}
+
+.delete-icon::before {
+    transform: rotate(45deg);
+}
+
+.delete-icon::after {
+    transform: rotate(-45deg);
+}
